@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1a1a1a;
+  flex-direction: column;
+  color: aliceblue;
+}
+.BodyOfCalculator {
+  padding: 20px;
+  border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+button{
+  box-sizing: border-box;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans';
+  -webkit-appearance: none;
+  padding: 25px;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  cursor: pointer;
+  width: 70px;
+  background-color: rgb(47, 51, 50);
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  margin: 0.2em;
+}
+.First-row button{
+  background: #c60909;
+}
+.First-row{
+  margin-bottom: 10px;
+}
+input{
+  box-sizing: border-box;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans';
+  -webkit-appearance: none;
+  padding: 25px;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  margin: 0.2em;
+  background-color: rgb(47, 51, 50);
+  width: 240px;
+  
+}
