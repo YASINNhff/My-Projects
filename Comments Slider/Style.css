@@ -1,0 +1,110 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("assets/images/6.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 100% 0%;
+    animation: Animating 100s ease-in-out  infinite alternate ;
+}
+
+  @keyframes Animating {
+    100%{
+      background-position: 0% 0%;
+    }
+    
+
+  }
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: poppins , sans-serif;
+}
+
+/* Slider Styles */
+.Commnets-slider{
+width: 60%;
+    height: 400px;
+    background:transparent;
+    border: 1px solid   rgb(15, 164, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.2rem;
+    backdrop-filter: blur(0.5rem);
+    color: aliceblue;
+
+}
+.Comment-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.Comment-image{
+    width: 110px;
+    height: 110px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+    >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.info-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0 5%;
+    text-align: center;
+}
+.Comment-arrow-buttons{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+>button{
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+}
+}
+
+.next-button , .previous-button {
+    background-color: #3498db; 
+    color: #ffffff;
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease-in-out; 
+  }
+  
+  .next-button:hover , .previous-button:hover {
+    background-color: #0a5aa1; 
+  }
+  
+  .next-button:active , .previous-button:active {
+    background-color: #05597d; 
+    transform: translateY(2px); 
+  }
+  .next-button>img{
+    rotate: 90deg;
+  }
+  .previous-button>img{
+    rotate: 270deg;
+  }
