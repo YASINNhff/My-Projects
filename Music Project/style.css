@@ -1,0 +1,173 @@
+body{
+    width:  100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url("music-back.jpg");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    font-family: poppins;
+}
+.dark-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   background: rgba(0, 0, 0, 0.45);
+   z-index: -1;
+}
+.music-box{
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgba(255, 228, 196, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(255, 255, 255 , 0.4);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+
+.music-preview{
+    margin-top: -130px;
+    width: 100%;
+    height: 60%;
+    display: grid;
+    place-items: center;
+}
+.img-wrapper{
+ width: 200px;
+ height: 200px;
+ border-radius: 50%;
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 17px;
+
+}
+.Controls{
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.547);
+    margin-bottom: -130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name-preview{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: -20px;
+}
+.time-wrapper{
+    display: flex;
+    margin-bottom: 10px;
+    gap: 15rem;
+    animation-play-state: paused;
+}
+
+
+input[type = "range"]{
+    -webkit-appearance: none;
+    height: 1.5px;
+    width: 300px;
+}
+input[type = "range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ddf0ff;
+    cursor: pointer;
+}
+.Controls-button{
+    margin-top: 2.5rem;
+    display: flex;
+}
+.Controls-button > i {
+width: 50px;
+height: 50px;
+text-align: center;
+display: grid;
+place-items: center;
+border-radius: 50%;
+background: #ddf0ff;
+color: #2a5162;
+cursor: pointer;
+margin-inline-start: 10px;
+transition: all 0.1s ease-in-out;
+}
+.Controls-button > i:hover {
+    background: #b7d0e2;
+}
+.Controls-button > i:active{
+    background: #a5cae5;
+    transform: scale(0.95);
+} 
+
+.volume{
+    rotate: 270deg;
+    width: 100px!important;
+
+}
+.volume-div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 70px;
+left: -30px;
+>i{
+    position: absolute;
+    left: 45px;
+    top: -70px;
+    
+}
+>i:nth-child(2){
+    position: absolute;
+
+    top: 60px;
+}
+}
+.move{
+    animation: move 3s infinite ease-in-out;
+    animation-play-state: running;
+
+}
+
+@keyframes move {
+    
+    0%{rotate: 0deg;}
+    40%{rotate: 230deg;}
+    65%{rotate: -230deg;}
+    100%{rotate: 0deg;}
+}
+.imgTransfer{
+    animation: imgTransfer 0.5s  ease-in-out forwards;
+
+}
+@keyframes imgTransfer {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(400px);}
+    100%{transform: translateX(0);}
+}
+.imgTransferBack{
+    animation: imgTransferBack 0.5s  ease-in-out forwards;
+
+}
+@keyframes imgTransferBack {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-400px);}
+    100%{transform: translateX(0);}
+}
